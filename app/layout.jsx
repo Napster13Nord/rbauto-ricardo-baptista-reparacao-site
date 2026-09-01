@@ -2,7 +2,7 @@ import './globals.css';
 import { CLASSES_FONTES } from '../lib/fontes';
 
 export const metadata = {
-  icons: { icon: '/favicon.svg', shortcut: '/favicon.svg', apple: '/favicon.svg' },
+  icons: { icon: '/logos/rbauto-ricardo-baptista-reparacao.png', shortcut: '/logos/rbauto-ricardo-baptista-reparacao.png', apple: '/logos/rbauto-ricardo-baptista-reparacao.png' },
 };
 
 export default function RootLayout({ children }) {
