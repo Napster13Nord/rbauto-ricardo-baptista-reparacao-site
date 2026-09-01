@@ -247,16 +247,19 @@ function GoogleRatingBadge({ className = '' }) {
 // do círculo da cor primária. Um negócio que já tem marca própria não quer ver
 // um símbolo genérico no cimo do site dele.
 //
-// Do `dim` só se aproveita a altura: quase todos estes logótipos trazem o nome
-// lá dentro e são largos, e o quadrado encolhia-os até não se lerem. A altura é
-// que tem de bater certo com o texto ao lado, a largura que venha.
-export function Marca({ dim = 'h-9 w-9', ring = false }) {
+// O `dim` é a medida do ícone do nicho: um quadrado ao lado do nome escrito.
+// Um logótipo do negócio não cabe lá — é largo, traz o nome lá dentro, e à
+// altura do ícone o nome dentro dele fica com uns dez pixéis e não se lê.
+//
+// Por isso tem medida própria e mais alta, que é o espaço que o nome escrito
+// deixou de ocupar ao lado. A largura vem da forma do ficheiro; o `max-w` só
+// trava um logótipo muito comprido antes de ele empurrar o menu.
+export function Marca({ dim = 'h-9 w-9', logoDim = 'h-14 sm:h-16', ring = false }) {
   const { BRAND, LogoIcon } = useSite()
   if (BRAND.logo) {
-    const altura = dim.split(' ').find((c) => c.startsWith('h-')) ?? 'h-9'
     return (
-      <span className={`relative flex ${altura} items-center shrink-0`}>
-        <img src={BRAND.logo} alt={BRAND.name} className="h-full w-auto max-w-[13rem] object-contain" />
+      <span className={`relative flex ${logoDim} items-center shrink-0`}>
+        <img src={BRAND.logo} alt={BRAND.name} className="h-full w-auto max-w-[15rem] object-contain" />
       </span>
     )
   }
@@ -1809,7 +1812,7 @@ export function Footer() {
               partir daí. Os irmãos trazem tamanho próprio e não são afetados. */}
           <div className="lg:col-span-2 flex flex-col gap-3 text-lg">
             <div className="flex items-center gap-2">
-              <Marca dim="h-10 w-10" />
+              <Marca dim="h-10 w-10" logoDim="h-20" />
               <span className={`font-display font-bold text-2xl ${BRAND.logo ? 'sr-only' : ''}`}>
                 {BRAND.name}
               </span>
