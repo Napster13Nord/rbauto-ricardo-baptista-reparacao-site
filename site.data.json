@@ -1,0 +1,500 @@
+{
+  "_leia": "Personalização deste negócio. É o único ficheiro editável à mão.",
+  "modo": "cliente",
+  "teste": false,
+  "tema": {
+    "slug": "12-oficina-auto",
+    "colors": {
+      "primary": "#B0651A",
+      "primaryDark": "#8E5014",
+      "primaryLight": "#DC9A3C",
+      "accent": "#3A4A5A",
+      "accentDark": "#293641",
+      "rgb": "176,101,26"
+    },
+    "logoIcon": "Car",
+    "heroParticleIcon": "Cog",
+    "faviconPaths": "<path d=\"M5 14 6.5 8.5A2 2 0 0 1 8.4 7h7.2a2 2 0 0 1 1.9 1.5L19 14M5 14h14v4H5zM7 18v2M17 18v2\"/>",
+    "nav": [
+      {
+        "label": "Início",
+        "href": "#inicio"
+      },
+      {
+        "label": "Serviços",
+        "href": "#servicos"
+      },
+      {
+        "label": "Método",
+        "href": "#metodo"
+      },
+      {
+        "label": "Processo",
+        "href": "#processo"
+      },
+      {
+        "label": "Contactos",
+        "href": "#contactos"
+      }
+    ],
+    "services": [
+      {
+        "icon": "CircuitBoard",
+        "title": "Eletricidade automóvel",
+        "text": "Avarias elétricas, cablagens, luzes, sensores e problemas intermitentes difíceis de apanhar."
+      },
+      {
+        "icon": "BatteryCharging",
+        "title": "Baterias e alternadores",
+        "text": "Teste de carga, substituição de baterias, alternadores e motores de arranque."
+      },
+      {
+        "icon": "Gauge",
+        "title": "Diagnóstico eletrónico",
+        "text": "Leitura de centralinas e códigos de avaria, com interpretação em vez de troca de peças à sorte."
+      },
+      {
+        "icon": "Snowflake",
+        "title": "Ar condicionado",
+        "text": "Carga de gás, deteção de fugas, substituição de compressores e higienização do sistema."
+      },
+      {
+        "icon": "Wrench",
+        "title": "Mecânica geral",
+        "text": "Revisões, travões, embraiagens, distribuição e preparação para inspeção."
+      },
+      {
+        "icon": "Car",
+        "title": "Pré-inspeção",
+        "text": "Verificação prévia dos pontos que mais reprovam, para não ir à inspeção duas vezes."
+      }
+    ],
+    "hero": {
+      "image": "https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=2000&q=75",
+      "alt": "Mecânico a trabalhar num motor com o capô aberto",
+      "eyebrow": "Oficina auto na Batalha",
+      "line1": "Antes de trocar a peça,",
+      "line2": "percebemos a avaria.",
+      "sub": "Diagnóstico eletrónico, mecânica geral, eletricidade automóvel e ar condicionado — com orçamento antes de mexer."
+    },
+    "copy": {
+      "tagline": "Diagnóstico a sério antes de trocar peças.",
+      "navCta": "Marcar oficina",
+      "heroCta": "Marcar oficina",
+      "features": {
+        "eyebrow": "Como trabalhamos",
+        "titleA": "Trocar peças à sorte",
+        "titleB": "sai sempre mais caro."
+      },
+      "steps": {
+        "eyebrow": "O processo",
+        "titleA": "Do diagnóstico ao carro",
+        "titleB": "entregue testado."
+      },
+      "services": {
+        "eyebrow": "Serviços",
+        "titleA": "Eletricidade e mecânica,",
+        "titleB": "na mesma oficina."
+      },
+      "reviews": {
+        "titleA": "O que dizem",
+        "titleB": "os clientes",
+        "sub": "Avaliações de clientes com a viatura diagnosticada e entregue."
+      },
+      "contact": {
+        "titleA": "O carro faz um barulho novo?",
+        "titleB": "Descreva-o como conseguir.",
+        "sub": "Diga marca, modelo, ano e o que o carro faz. Quanto mais concreto for o sintoma, mais rápido é o diagnóstico.",
+        "fieldLabel": "Viatura e sintoma",
+        "fieldPlaceholder": "Ex.: Golf VII de 2016, acende a luz da bateria em andamento e às vezes custa a arrancar de manhã."
+      },
+      "footerStatus": "A aceitar entradas"
+    },
+    "features": [
+      {
+        "eyebrow": "Entradas",
+        "title": "O que entra mais na oficina",
+        "body": "Problemas elétricos intermitentes, baterias que não aguentam a noite e ar condicionado sem frio. Avarias que exigem método, não sorte.",
+        "bullets": [
+          "Diagnóstico eletrónico",
+          "Peças testadas antes de trocar",
+          "Orçamento antes de avançar"
+        ],
+        "kind": "shuffler"
+      },
+      {
+        "eyebrow": "Diagnóstico",
+        "title": "Ler o erro é só o princípio",
+        "body": "O código de avaria diz onde está o sintoma, não a causa. Medimos, testamos e confirmamos antes de dizer que peça precisa de ser substituída.",
+        "bullets": [
+          "Leitura de centralina",
+          "Medição e teste no local",
+          "Explicação do que encontrámos"
+        ],
+        "kind": "signature"
+      },
+      {
+        "eyebrow": "Marcações",
+        "title": "Entrada marcada, carro pronto quando dissemos",
+        "body": "Marcamos a entrada com hora e damos previsão de saída. Se algo mudar durante a reparação, ligamos antes de continuar.",
+        "bullets": [
+          "Hora de entrada marcada",
+          "Previsão de saída",
+          "Aviso antes de qualquer extra"
+        ],
+        "kind": "scheduler"
+      }
+    ],
+    "shuffler": {
+      "dotColor": "#B0651A",
+      "items": [
+        {
+          "tag": "Elétrica",
+          "label": "Luz de bateria acesa em andamento",
+          "meta": "Comum"
+        },
+        {
+          "tag": "Arranque",
+          "label": "Carro não pega de manhã",
+          "meta": "Comum"
+        },
+        {
+          "tag": "A/C",
+          "label": "Ar condicionado sem frio",
+          "meta": "Verão"
+        }
+      ]
+    },
+    "scheduler": {
+      "week": "Semana 14 · Abril",
+      "badge": "Entrada",
+      "confirmed": "Entrada confirmada",
+      "choose": "Escolher um dia"
+    },
+    "signature": {
+      "bg": "linear-gradient(180deg, #F5F1EB 0%, #E6DCCD 65%, #D6C6AE 100%)",
+      "line": "#8E5014",
+      "source": "beam",
+      "surface": "grid",
+      "particle": {
+        "viewBox": "0 0 24 24",
+        "mode": "stroke",
+        "paths": [
+          "M12 7.6 a4.4 4.4 0 1 0 0.01 0",
+          "M12 1.6 v3 M12 19.4 v3 M1.6 12 h3 M19.4 12 h3 M4.5 4.5 l2.1 2.1 M17.4 17.4 l2.1 2.1 M19.5 4.5 l-2.1 2.1 M6.6 17.4 l-2.1 2.1"
+        ],
+        "gradient": [
+          "#E8D9BE",
+          "#C08B3C",
+          "#8E5014"
+        ],
+        "strokeWidth": 1.8,
+        "rotate": 360
+      },
+      "header": {
+        "icon": "Gauge",
+        "label": "Diagnóstico a decorrer",
+        "value": 5,
+        "unit": "testes",
+        "pad": true,
+        "increment": true
+      },
+      "statuses": [
+        {
+          "text": "Centralina lida",
+          "label": "Leitura",
+          "tone": "primary"
+        },
+        {
+          "text": "Erro intermitente confirmado",
+          "label": "Análise",
+          "tone": "accent"
+        },
+        {
+          "text": "Componente substituído",
+          "label": "Reparação",
+          "tone": "primary"
+        },
+        {
+          "text": "Ensaio de estrada concluído",
+          "label": "Pronto",
+          "tone": "emerald"
+        }
+      ]
+    },
+    "pillars": [
+      {
+        "label": "Avaliações Google",
+        "end": 75,
+        "text": "Clientes na Batalha que já avaliaram o trabalho da casa no Google."
+      },
+      {
+        "label": "Classificação média",
+        "end": 5,
+        "decimals": 1,
+        "text": "Média no Google, construída carro a carro."
+      },
+      {
+        "label": "Entrada marcada",
+        "end": 48,
+        "suffix": "h",
+        "text": "Prazo habitual entre o pedido e a viatura na rampa para diagnóstico."
+      }
+    ],
+    "steps": [
+      {
+        "n": "01",
+        "eyebrow": "Entrada",
+        "title": "Ouvir o carro e o condutor",
+        "text": "Metade do diagnóstico está no que o condutor descreve: quando acontece, com que temperatura, a que velocidade. Depois vamos confirmar à máquina.",
+        "bullets": [
+          "Histórico e sintomas",
+          "Leitura de códigos",
+          "Ensaio de estrada se necessário"
+        ],
+        "img": "https://images.unsplash.com/photo-1570129476815-ba368ac77013?auto=format&fit=crop&w=900&q=70",
+        "alt": "Oficina auto com ferramentas e bancada"
+      },
+      {
+        "n": "02",
+        "eyebrow": "Reparação",
+        "title": "Orçamento primeiro, chave inglesa depois",
+        "text": "Apresentamos o valor da peça e da mão de obra antes de avançar. Se durante a reparação aparecer outra coisa, ligamos antes de continuar.",
+        "bullets": [
+          "Orçamento aprovado por si",
+          "Peças com origem indicada",
+          "Sem trabalhos não autorizados"
+        ],
+        "img": "https://images.unsplash.com/photo-1586335963805-7b603f62a048?auto=format&fit=crop&w=900&q=70",
+        "alt": "Interior de uma oficina automóvel com elevadores"
+      },
+      {
+        "n": "03",
+        "eyebrow": "Entrega",
+        "title": "Testado antes de sair do portão",
+        "text": "Depois da reparação, o carro é testado nas condições em que a avaria aparecia. Entregamos com explicação do que foi feito e a peça antiga, se quiser vê-la.",
+        "bullets": [
+          "Teste nas condições da avaria",
+          "Peça antiga disponível",
+          "Fatura com trabalho discriminado"
+        ],
+        "img": "https://images.unsplash.com/photo-1613214150132-9606e332d68e?auto=format&fit=crop&w=900&q=70",
+        "alt": "Viatura em elevador de oficina"
+      }
+    ],
+    "trust": [
+      {
+        "icon": "Star",
+        "title": "5,0 ★ no Google",
+        "text": "75 avaliações de clientes na Batalha.",
+        "href": "https://www.google.com/maps/search/?api=1&query=RBAUTO%20(Ricardo%20Baptista)%20Repara%C3%A7%C3%A3o%20e%20Manuten%C3%A7%C3%A3o%20Autom%C3%B3vel&query_place_id=ChIJB5BpS-WhGA0R5SFDyykIwFk"
+      },
+      {
+        "icon": "CircuitBoard",
+        "title": "Especialistas em auto-elétrica",
+        "text": "Avarias elétricas e eletrónicas que outras oficinas devolvem."
+      },
+      {
+        "icon": "ShieldCheck",
+        "title": "Orçamento antes de mexer",
+        "text": "Nenhum trabalho avança sem a sua autorização."
+      }
+    ]
+  },
+  "lead": {
+    "nicho": "12-oficina-auto",
+    "nome_negocio": "RBAUTO (Ricardo Baptista) Reparação e Manutenção Automóvel",
+    "telefone": "+351910419935",
+    "tipo_telefone": "telemovel",
+    "concelho": "Batalha",
+    "freguesia": null,
+    "reviews": 75,
+    "nota": 5,
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=RBAUTO%20(Ricardo%20Baptista)%20Repara%C3%A7%C3%A3o%20e%20Manuten%C3%A7%C3%A3o%20Autom%C3%B3vel&query_place_id=ChIJB5BpS-WhGA0R5SFDyykIwFk",
+    "segmento": "B_sem_nada",
+    "oficio": "oficina automóvel"
+  },
+  "enrich": {
+    "horario": {
+      "dom": "Encerrado",
+      "qua": "09:00 – 13:00, 14:00 – 19:00",
+      "qui": "09:00 – 13:00, 14:00 – 19:00",
+      "sab": "09:00 – 13:00",
+      "seg": "09:00 – 13:00, 14:00 – 19:00",
+      "sex": "09:00 – 13:00, 14:00 – 19:00",
+      "ter": "09:00 – 13:00, 14:00 – 19:00"
+    },
+    "email": "rbauto96@gmail.com",
+    "reviews": [
+      {
+        "date": "2026-03-07",
+        "text": "Eu gostei muito de seu trabalho Ricardo Baptista. Você é um mecânico cinco estrelas e adorei o seu trabalho e a sua sinceridade e o preço espetacular muito obrigada pela atenção dispensada para me ajudar com a minha carrinha Ricardo Baptista atenciosamente Carla Jesus",
+        "author": "Carla J.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWhQ3u7IknL3leCChPcK3fv6APG91rmjGFBafzd9Brk9PD0SJRI=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-05-13",
+        "text": "Qualidade excelente, e o mais importante, tudo foi feito rapidamente. Recomendo muito! Entre em contato, você ficará satisfeito com o serviço.",
+        "author": "Mykoka",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIV-8Sr0esdL26t7G2lZurbxPypeFuUikYh9FEPxx_TcjvHTA=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-05-08",
+        "text": "Serviço 5 estrelas, Sr. Ricardo e os funcionários foram muito atenciosos e conseguiram fazer um serviço rápido e muito bom. Indico os serviços!",
+        "author": "Camila A.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWbZVMvkUCTGVemkVZy-7V0cTpxylrkeAea5UDrzXM6tIf3a1E=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-06-16",
+        "text": "Oficina com ambiente agradável e inovador , uma oficina que aconselho a qualquer cliente e com empregados profissionais na mecânica entre outros aconselho a RBAuto .",
+        "author": "Vera V.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjU0X-z2hG5jplJqoBplTRoJmHkyLv_6vcMowA716y66KO9aHR02=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-06-16",
+        "text": "Ótimo atendimento e excelente trabalho, super recomendo!!",
+        "author": "Paola C.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIK8K-OF06vzRBv9WESPtdBBDMhi6cHD5AuIy2g7btHpAlW2Dvw=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-02-11",
+        "text": "Ótimo profissional resolveu o problema do meu carro muito rápido, preço justo e sem enrolação. Recomendo!",
+        "author": "Gean M.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL55Ah7J1hIVSTRosFrj-uEtGipqFq6ceXOkdpUJ7GMo5XqDg=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-11-08",
+        "text": "O Ricardo é um profissional muito bom, um profissional em que se pode confiar porque é alguém sério e tem muita experiência e conhecimento no que faz, eu indico esse grande profissional pela sua honestidade e por ser om profissional sério.obrigado Ricardo pelo seu serviço em meu veículo.",
+        "author": "Jailton B.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUb2tPpkg_dfNVBgQrjqhlFNCKXlvUY8YwlO_MkPbLVQ6oF7x3V5Q=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-02-11",
+        "text": "Gostei do serviço - prazo e orçamento consoante o estipulado. Hei de voltar!",
+        "author": "Vlad",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUvbPu9rXVkCo8C4_fAE8W3q_XM-2pZd04Q1byF7ZeVr_PwNmBl=s64-c-rp-mo-ba12-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-04-08",
+        "text": "Serviço e atendimento rápido.\nProfissionais no que fazem.\n\nA voltar e a recomendar",
+        "author": "Marco S.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIwhu7IFvinjpp2HjYhrqK03Q7O2UUUPepJtmDiYHzCjWurUA=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-04-12",
+        "text": "Excelente atendimento e serviço!!! Recomendo vivamente!!",
+        "author": "Sandra P.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW4-xHBIBopu34dL4y8BZytVIwtPtTiv9AaIfbGn6v1QB2CzDc0Bw=s64-c-rp-mo-ba12-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-09-17",
+        "text": "Ótimo atendimento, serviço de alta qualidade,\nÓtimo profissional, confiável, e atencioso.",
+        "author": "Andre O.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJOAiCqJmnstpeRln-WR8xVL2g-VzKueOZxGXXruQ8EOp1Egw=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-04-09",
+        "text": "Pontual e muito responsável..ótimo trabalho !! Eu recomendo!",
+        "author": "Rosangela C.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWAckOj_KL1WqqVCXCnJS9uinA8U9jIfYCCIxGXtfZlo2hejpY5Iw=s64-c-rp-mo-ba12-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-11-27",
+        "text": "Excelente, tanto o atendimento quanto a qualidade do profissional. Podes ir sem medo, 110% confiável!",
+        "author": "Vitor T.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWG9SdRv074rWzP9n_EIs73xmBhJAa6EcCoktu_Jbk1LvoyOPS_=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-01-04",
+        "text": "São muito boas pessoas, ótimos trabalhadores e têm um comportamento exemplar.",
+        "author": "Muhammad T.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocL-TkFVpq_qc5DFbiJcHyxt3r20HVWIPcPyiknJKHK6LZU0FA=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-12-05",
+        "text": "Mecânico extremamente atencioso , preço justo . Se pudesse daria 10 estrelas",
+        "author": "André C.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW54W40_qzDdjPpRUPWzevwZ-M_aXEGYsVcaWiB8bZuJcpC3FV4OQ=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-01-25",
+        "text": "Muito bom atendimento, rápido e qual quer necessidade sempre a ajudar.",
+        "author": "Wagner S.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXRjeh5dM-HNiadroVUYg7gN3ZCvopUbfwwjpnZ5CqEt-r5x8RHhw=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-04-17",
+        "text": "Muito atencioso, e preocupado com os pedidos dos clientes. Quando temos alguma urgência arranja sempre disponibilidade para ajudar.\nRecumendo vivamente, pois confio plenamente em deixar o meu carro nas suas mãos, como já aconteceu algumas vezes e veio sempre TOP!👍🔝",
+        "author": "Mafalda A.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjWcnxRbfHHrVTy-xJ8M82YhyjCHx0U2Kn1kWHuSB69eIzh6s2IY=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-11-28",
+        "text": "Ótima ,muito atencioso ,sério e transparente com os clientes ,super indico a qualquer pessoa ,ótimo profissional",
+        "author": "Janaina P.",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKwjGqIv3T09dZf3ut8peGG0M-I_RD9OHKE0JDy_8M7agjjUA=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2026-03-17",
+        "text": "De salientar todo o profissionalismo e dedicação por parte do Ricardo!",
+        "author": "Gonçalo S.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXK3SZ5mTCwFKuBcoovK7J4UMQYO3Py-rt3v1F82_9LiARXdkTh=s64-c-rp-mo-br100",
+        "rating": 5
+      },
+      {
+        "date": "2025-03-15",
+        "text": "Excelente oficina de reparação automóvel. Trabalho efetuado com muita qualidade e velocidade, que é, no fundo, o que interessa. Recomendo a quem precisar de tudo o que tenha a ver com automóveis.",
+        "author": "Francisco F.",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjW2t_VaOuM7C8WpSrCFeCNouFOx_Mn1K0j12JunESTGcFsg36s_=s64-c-rp-mo-br100",
+        "rating": 5
+      }
+    ]
+  },
+  "cliente": {
+    "dominio": "https://oficinarbauto.pt",
+    "email": "rbauto96@gmail.com",
+    "areasServidas": [
+      "Sao Jorge",
+      "Porto de Mós",
+      "Portugal"
+    ],
+    "faq": [],
+    "fundadoEm": null
+  },
+  "local": {
+    "morada": "R. 26 de Fevereiro 6",
+    "codigoPostal": "2480-062",
+    "localidade": "Sao Jorge",
+    "lat": 39.631913,
+    "lng": -8.849821,
+    "website": null,
+    "sociais": {
+      "facebook": "https://www.facebook.com/p/RBAuto-Reparacao-e-Manuten%C3%A7%C3%A3o-Autom%C3%B3vel-61555528451473/"
+    }
+  },
+  "servico": {
+    "api": "https://sites-ia.vercel.app",
+    "site": "/12-oficina-auto/rbauto-ricardo-baptista-reparacao",
+    "rastrear": true
+  },
+  "zonas": [],
+  "fotosPropostas": []
+}

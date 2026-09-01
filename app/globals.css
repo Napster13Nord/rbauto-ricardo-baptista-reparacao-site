@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* A Cormorant Garamond tem a altura-de-x muito mais baixa que a Inter e a Plus
+   Jakarta. Ao mesmo font-size, a metade em itálico dos títulos lia-se sempre
+   mais pequena do que a metade em sans ao lado dela.
+
+   O acerto é relativo — 1em é o tamanho que o elemento já herda — por isso
+   acompanha sozinho a escala responsiva dos títulos (text-4xl no telemóvel,
+   text-5xl no tablet, text-8xl no herói) sem precisar de uma media query por
+   tamanho. Vem depois do @tailwind utilities de propósito: com a mesma
+   especificidade, ganha quem vier por último, e é isso que faz este acerto
+   valer também onde o elemento traz uma classe text-* própria. */
+.font-serif { font-size: 1.18em; }
+
+/* O desenho do título, escolhido no seletor de estilo da demo.
+
+   Por omissão o título parte-se ao meio: primeira metade em `font-display`,
+   segunda em `font-serif` itálico — a regra acima. Com `data-titulo="unico"` a
+   segunda metade passa a usar a mesma letra da primeira e perde o itálico, e o
+   título lê-se como uma peça só. A ênfase não desaparece: continua a estar na
+   cor e no peso, que vêm das classes do próprio elemento.
+
+   É o que faz as quatro combinações parecerem diferentes em vez de serem a
+   mesma página com outras letras. O atributo é escrito pelo SeletorEstilo; sem
+   ele, nada disto se aplica — que é o estado do site vendido. */
+:root[data-titulo="unico"] .font-serif {
+  font-family: var(--fonte-display);
+  font-style: normal;
+  font-size: 1em;
+}
+
+/* As etiquetas em maiúsculas — sobrancelhas de secção, rótulos dos pilares,
+   passos do processo — são todas a mesma família: JetBrains Mono em caixa alta
+   com um quarto de em de espaçamento. Vinham a 10 e a 11 px e em peso normal,
+   o que a esta escala se lê cinzento e apagado. Passam todas a 13 px a bold,
+   um só sítio para as oito ocorrências. Como a regra da serif acima, vem
+   depois do @tailwind utilities para ganhar às classes text-* de cada uma. */
+.tracking-\[0\.25em\] {
+  letter-spacing: .25em;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+/* A sobrancelha do herói é a exceção: fica a 500. As outras etiquetas anunciam
+   uma secção e ganham em pesar; esta assenta sobre uma fotografia, logo por
+   cima de uma manchete enorme, e a 700 competia com ela. Vem depois da regra
+   acima para lhe ganhar com a mesma especificidade. */
+.hero-meta { font-weight: 500; }
+
+:root {
+  /* Paleta por omissão, usada pelo painel. As páginas das demos sobrepõem-na
+     com as cores do nicho num <style> próprio, que vem depois e ganha.
+     Sem isto, bg-primary no /admin resolvia para uma variável inexistente e os
+     botões saíam sem cor. */
+  --primary: 37 99 235;
+  --primary-dark: 29 78 216;
+  --primary-light: 96 165 250;
+  --accent: 13 148 136;
+  --accent-dark: 15 118 110;
+
+  --brand-primary: rgb(var(--primary));
+  --brand-primary-shadow: rgb(var(--primary) / 0.35);
+
+  /* A combinação de letra por omissão — a mesma que o app/layout.jsx carrega.
+     As `--font-*` vêm do `lib/fontes.js`, que o `next/font` serve do próprio
+     domínio; as famílias a seguir são a reserva do sistema.
+     O Tailwind consome estas quatro através de `font-display`, `font-serif`,
+     `font-body` e `font-mono`; a barra da demo reescreve-as no documento para
+     trocar de combinação sem recarregar. Os valores de reserva estão aqui e
+     não só no lib/tipografias.js porque o painel também os usa. */
+  --fonte-display: var(--font-display), system-ui, sans-serif;
+  --fonte-serif: var(--font-serif), Georgia, serif;
+  --fonte-body: var(--font-body), system-ui, sans-serif;
+  --fonte-mono: var(--font-mono), ui-monospace, monospace;
+}
+
+@layer base {
+  /* `clip` e não `hidden`: corta o que passa da largura sem criar um contentor
+     de scroll, e por isso o `sticky` da secção do protocolo continua a funcionar.
+     Sem isto, no telemóvel real qualquer elemento 1 px mais largo abria scroll
+     horizontal na página inteira. */
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: clip; }
+  body { @apply bg-background text-ink font-body; overflow-x: hidden; overflow-x: clip; overflow-wrap: break-word; }
+  ::selection { background-color: rgb(var(--primary)); color: #FFFFFF; }
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #F9F9F9; }
+  ::-webkit-scrollbar-thumb { background: rgb(var(--primary-light)); border-radius: 10px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgb(var(--primary)); }
+}
+
+@layer components {
+  .noise-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none; z-index: 1; opacity: 0.05; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .magnetic-btn { position: relative; overflow: hidden; transition: transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .magnetic-btn:hover { transform: scale(1.03) translateY(-1px); }
+  .magnetic-btn:active { transform: scale(0.98); }
+  .magnetic-btn::before {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+  }
+  .magnetic-btn:hover::before { transform: translateY(0); }
+  .lift-on-hover { transition: transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94); }
+  .lift-on-hover:hover { transform: translateY(-1px); }
+  .gradient-text {
+    background: linear-gradient(135deg, rgb(var(--primary)) 0%, rgb(var(--primary-dark)) 100%);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  }
+  /* A barra do topo depois de se rolar. Era translúcida a 65% com desfoque por
+     trás, e o texto da página passava através dela: a meio de um artigo lia-se
+     o menu por cima das palavras e não se percebia onde acabava um e começava
+     o outro. Passa a branco opaco. O desfoque sai com ele, que não há nada
+     para desfocar por trás de uma superfície que tapa. */
+  .glass {
+    background: #FFFFFF;
+    border: 1px solid rgb(var(--primary) / 0.18);
+  }
+  .glass-dark {
+    background: rgba(15,20,25,0.75);
+    backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  }
+  .grid-bg {
+    background-image:
+      linear-gradient(rgb(var(--primary) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(var(--primary) / 0.07) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Badge de avaliação Google */
+  .esu-badge {
+    font-size: clamp(10.5px, 3vw, 14px);
+    display: inline-flex; align-items: center; flex-wrap: nowrap; max-width: 100%;
+    gap: .85em; padding: .6em 1.15em;
+    border: 1px solid #e2e8f0; border-radius: 9999px; background: #fff;
+    box-shadow: 0 10px 30px rgba(0,0,0,.06);
+    text-decoration: none; line-height: 1; white-space: nowrap;
+    transition: box-shadow .2s, transform .2s;
+  }
+  .esu-badge:hover { box-shadow: 0 10px 30px rgba(0,0,0,.12); transform: translateY(-1px); }
+  .esu-badge__logo { display: block; width: 1.45em; height: 1.45em; flex: none; }
+  .esu-badge__main { display: flex; align-items: center; gap: .55em; white-space: nowrap; }
+  .esu-badge__value,
+  .esu-badge__label { font-size: 1em; font-weight: 600; color: #0f172a; }
+  .esu-badge__count { font-size: 1em; color: #475569; }
+  .esu-badge__stars { display: flex; align-items: center; gap: .12em; }
+  .esu-badge__stars svg { width: 1.45em; height: 1.45em; display: block; flex: none; }
+  .esu-badge__avatars { display: flex; flex: none; align-items: center; }
+  .esu-badge__avatar {
+    box-sizing: border-box;
+    width: 2em; height: 2em; min-width: 2em;
+    border-radius: 50%; border: .14em solid #fff; object-fit: cover;
+    display: grid; place-items: center;
+    background: #e2e8f0; color: #64748b;
+    font-size: 1em;
+  }
+  .esu-badge__avatar + .esu-badge__avatar { margin-left: -.55em; }
+  .esu-badge__more { background: #cbd5e1; }
+  .esu-badge__more > span { font-size: .72em; font-weight: 700; color: #334155; letter-spacing: -.02em; }
+  /* As caras saem em qualquer telemóvel, não só nos estreitos. O limite estava
+     em 420 px e os telefones grandes de hoje — iPhone Pro Max e os Samsung de
+     topo — medem 430 px: as caras ficavam e transbordavam para fora do ecrã.
+     639,98 px é o degrau abaixo do `sm` do Tailwind, o mesmo que separa
+     telemóvel de tablet no resto da página. */
+  @media (max-width: 639.98px) { .esu-badge__avatars { display: none; } }
+
+  /* Ticker de avaliações */
+  @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-33.3333%); } }
+  @keyframes ticker-reverse { 0% { transform: translateX(-33.3333%); } 100% { transform: translateX(0); } }
+  .animate-ticker { animation: ticker linear infinite; }
+  .animate-ticker-reverse { animation: ticker-reverse linear infinite; }
+  .ticker-group:hover .animate-ticker,
+  .ticker-group:hover .animate-ticker-reverse { animation-play-state: paused; }
+  .mask-linear-fade {
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-ticker, .animate-ticker-reverse { animation: none; }
+  }
+
+  .text-balance { text-wrap: balance; }
+}
+
+@layer utilities {
+  .perspective { perspective: 1200px; }
+  .preserve-3d { transform-style: preserve-3d; }
+}
