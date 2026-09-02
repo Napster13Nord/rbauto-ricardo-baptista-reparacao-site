@@ -1924,6 +1924,14 @@ export function Footer() {
             >
               Termos
             </Link>
+            <a
+              href="https://wpexperts.pt"
+              target="_blank"
+              rel="noopener"
+              className="font-mono text-[10px] uppercase tracking-[0.18em] text-white/40 hover:text-primary transition-colors"
+            >
+              Site por WP Experts
+            </a>
           </div>
         </div>
       </div>
