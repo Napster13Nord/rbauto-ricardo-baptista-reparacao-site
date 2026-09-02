@@ -60,6 +60,10 @@ export function construirBrand(tema, lead, enrich, local = null) {
     // Logótipo do próprio negócio, quando ele o dá. Sem ele o site usa o ícone
     // do nicho — nunca se inventa uma marca.
     logo: tema.logo ?? null,
+    // A versão para fundo escuro: o cabeçalho é transparente sobre o herói até
+    // o visitante rolar, e um logótipo escuro não se via lá. Sem ela a `Marca`
+    // usa a normal nos dois sítios.
+    logoEscuro: tema.logoEscuro ?? null,
     website: local?.website ?? null,
     sociais: local?.sociais ?? {},
     // O campo de código postal do formulário mostrava literalmente "undefined":
