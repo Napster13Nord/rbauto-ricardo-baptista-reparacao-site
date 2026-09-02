@@ -254,12 +254,16 @@ function GoogleRatingBadge({ className = '' }) {
 // Por isso tem medida própria e mais alta, que é o espaço que o nome escrito
 // deixou de ocupar ao lado. A largura vem da forma do ficheiro; o `max-w` só
 // trava um logótipo muito comprido antes de ele empurrar o menu.
-export function Marca({ dim = 'h-9 w-9', logoDim = 'h-14 sm:h-16', ring = false }) {
+// `escuro` = está sobre fundo escuro (o cabeçalho antes de rolar, o menu do
+// telemóvel, o rodapé). Aí serve a versão clara do logótipo, se o cliente a
+// mandou; sem ela fica a normal, como era antes de haver duas.
+export function Marca({ dim = 'h-9 w-9', logoDim = 'h-11 sm:h-12 lg:h-14', escuro = false, ring = false }) {
   const { BRAND, LogoIcon } = useSite()
-  if (BRAND.logo) {
+  const logo = escuro ? (BRAND.logoEscuro || BRAND.logo) : BRAND.logo
+  if (logo) {
     return (
       <span className={`relative flex ${logoDim} items-center shrink-0`}>
-        <img src={BRAND.logo} alt={BRAND.name} className="h-full w-auto max-w-[15rem] object-contain" />
+        <img src={logo} alt={BRAND.name} className="h-full w-auto max-w-[13rem] object-contain" />
       </span>
     )
   }
@@ -296,7 +300,7 @@ export function Navbar() {
       >
         <nav className="flex items-center justify-between gap-4">
           <a href={`${basePath}/#inicio`} className="flex items-center gap-2 group shrink-0">
-            <Marca ring />
+            <Marca ring escuro={!scrolled} />
             {/* Sem o nome quando o logótipo já o traz: escrito ao lado ficava o
                 nome do negócio duas vezes, uma delas em corpo maior que a marca. */}
             <span
@@ -350,7 +354,7 @@ export function Navbar() {
       >
         <div className="flex items-center justify-between px-6 pt-7">
           <span className="flex items-center gap-2 text-white">
-            <Marca />
+            <Marca escuro />
             <span className={`font-display font-bold text-lg ${BRAND.logo ? 'sr-only' : ''}`}>
               {BRAND.short}
             </span>
@@ -1812,7 +1816,7 @@ export function Footer() {
               partir daí. Os irmãos trazem tamanho próprio e não são afetados. */}
           <div className="lg:col-span-2 flex flex-col gap-3 text-lg">
             <div className="flex items-center gap-2">
-              <Marca dim="h-10 w-10" logoDim="h-20" />
+              <Marca dim="h-10 w-10" logoDim="h-16" escuro />
               <span className={`font-display font-bold text-2xl ${BRAND.logo ? 'sr-only' : ''}`}>
                 {BRAND.name}
               </span>

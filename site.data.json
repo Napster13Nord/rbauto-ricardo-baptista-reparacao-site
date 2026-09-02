@@ -72,7 +72,7 @@
     "hero": {
       "image": "https://images.unsplash.com/photo-1504222490345-c075b6008014?auto=format&fit=crop&w=2000&q=75",
       "alt": "Mecânico a trabalhar num motor com o capô aberto",
-      "eyebrow": "Oficina auto na Batalha",
+      "eyebrow": "Oficina auto em Porto de Mós",
       "line1": "Antes de trocar a peça,",
       "line2": "percebemos a avaria.",
       "sub": "Diagnóstico eletrónico, mecânica geral, eletricidade automóvel e ar condicionado — com orçamento antes de mexer."
@@ -226,7 +226,7 @@
       {
         "label": "Avaliações Google",
         "end": 75,
-        "text": "Clientes na Batalha que já avaliaram o trabalho da casa no Google."
+        "text": "Clientes em Porto de Mós que já avaliaram o trabalho da casa no Google."
       },
       {
         "label": "Classificação média",
@@ -286,7 +286,7 @@
       {
         "icon": "Star",
         "title": "5,0 ★ no Google",
-        "text": "75 avaliações de clientes na Batalha.",
+        "text": "75 avaliações de clientes em Porto de Mós.",
         "href": "https://www.google.com/maps/search/?api=1&query=RBAUTO%20(Ricardo%20Baptista)%20Repara%C3%A7%C3%A3o%20e%20Manuten%C3%A7%C3%A3o%20Autom%C3%B3vel&query_place_id=ChIJB5BpS-WhGA0R5SFDyykIwFk"
       },
       {
@@ -300,14 +300,15 @@
         "text": "Nenhum trabalho avança sem a sua autorização."
       }
     ],
-    "logo": "/logos/rbauto-ricardo-baptista-reparacao-41405716.webp"
+    "logo": "/logos/rbauto-ricardo-baptista-reparacao-41405716.webp",
+    "logoEscuro": "/logos/rbauto-ricardo-baptista-reparacao-escuro-b152f1d9.webp"
   },
   "lead": {
     "nicho": "12-oficina-auto",
     "nome_negocio": "RBAUTO (Ricardo Baptista) Reparação e Manutenção Automóvel",
     "telefone": "+351910419935",
     "tipo_telefone": "telemovel",
-    "concelho": "Batalha",
+    "concelho": "Porto de Mós",
     "freguesia": null,
     "reviews": 75,
     "nota": 5,
@@ -483,7 +484,7 @@
   "local": {
     "morada": "R. 26 de Fevereiro 6",
     "codigoPostal": "2480-062",
-    "localidade": "Sao Jorge",
+    "localidade": "São Jorge",
     "lat": 39.631913,
     "lng": -8.849821,
     "website": null,
